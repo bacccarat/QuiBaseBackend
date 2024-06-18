@@ -92,7 +92,7 @@ export const uploadOcean =
     storage: multerS3({
       s3: s3Config,
       bucket: SpacesBucketName,
-      acl: SPACES_ACL.PUBLIC_READ,
+   
       key: function (request: Request, file, cb) {
         cb(null, uuid().replaceAll("-", "") + path.extname(file.originalname));
       },
@@ -107,7 +107,7 @@ export const uploadOceanAudio =
     storage: multerS3({
       s3: s3Config,
       bucket: SpacesBucketName,
-      acl: SPACES_ACL.PUBLIC_READ,
+      
       key: function (request: Request, file, cb) {
         cb(null, uuid().replaceAll("-", "") + path.extname(file.originalname));
       },
@@ -122,7 +122,7 @@ export const uploadOceanVideo =
     storage: multerS3({
       s3: s3Config,
       bucket: SpacesBucketName,
-      acl: SPACES_ACL.PUBLIC_READ,
+    
       key: function (request: Request, file, cb) {
         cb(null, uuid().replaceAll("-", "") + path.extname(file.originalname));
       },

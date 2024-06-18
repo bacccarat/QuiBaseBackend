@@ -60,7 +60,7 @@ export const postVideo = async (
           Key: "screenshots/" + videoKey.split(".")[0] + "-screenshot.jpg",
           Body: screenshotBuffer,
           ContentType: "image/jpeg",
-          ACL: "public-read", // Or your preferred ACL
+      
         })
       );
       console.log(

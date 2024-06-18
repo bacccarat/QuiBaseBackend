@@ -39,7 +39,7 @@ export const profilePhotoUpload = (
               Key: `${photo?.filename.split(".")[0]}-sm.gif`,
               Body: filetoUpload,
               ContentType: "image/gif",
-              ACL: "public-read",
+           
             })
           );
           console.log(

@@ -26,7 +26,7 @@ export const postPhotoUpload = (
         Key: `${photo?.filename}`,
         Body: filetoUpload,
         ContentType: "image/jpeg",
-        ACL: "public-read",
+
       })
     );
 
