@@ -29,6 +29,8 @@ export const postPhotoUpload = (
         ACL: "public-read",
       })
     );
+
+    console.log("file Resules",fileResults)
     if (fileResults) {
       unlink(`./uploads/${photo?.filename}`, (err) => {
         if (err) {

@@ -42,6 +42,10 @@ export const profilePhotoUpload = (
               ACL: "public-read",
             })
           );
+          console.log(
+            "🚀 ~ file: profilePhotoUpload.ts:46 ~ fileRes:",
+            fileResults
+          );
           if (fileResults) {
             req.imageUri = `https://${process.env.SPACES_NAME}.${process.env.SPACES_ENDPOINT_WITHOUT_HTTPS}/${
               photo?.filename.split(".")[0]
@@ -87,11 +91,11 @@ export const profilePhotoUpload = (
               Key: `${photo?.filename.split(".")[0]}-sm.jpg`,
               Body: filetoUpload,
               ContentType: "image/jpeg",
-              ACL: "public-read",
             })
           );
+          console.log("ioizik", fileResults)
           if (fileResults) {
-            req.imageUri = `https://${process.env.SPACES_NAME}.${process.env.SPACES_ENDPOINT_WITHOUT_HTTPS}/${
+            req.imageUri = `https://${process.env.SPACES_ENDPOINT_WITHOUT_HTTPS}/${
               photo?.filename.split(".")[0]
             }-sm.jpg`;
             unlink(
