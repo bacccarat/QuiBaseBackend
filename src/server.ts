@@ -1,5 +1,4 @@
-import * as dotenv from "dotenv";
-dotenv.config();
+
 import app from "./app";
 import notifier from "node-notifier";
 import config from "./config/env";
