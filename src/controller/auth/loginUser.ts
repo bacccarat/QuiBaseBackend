@@ -1,9 +1,9 @@
-import { NextFunction, Response } from "express";
+import { NextFunction, Request, Response } from "express";
 import prisma from "../../lib/prisma/init";
 import { compareHashedPassword, createJWT } from "../../middleware/auth";
-import { Request } from "express-validator/src/base";
+
 export async function loginUser(
-  req: Request,
+  req: any,
   res: Response,
   next: NextFunction
 ) {
