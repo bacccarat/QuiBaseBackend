@@ -83,6 +83,7 @@ export const postVideo = async (
     });
   }
   if (req.file) {
+    console.log("ddddd",req.file.path)
     const path = `${url}/api/video/${req.file.path.split("\\")[1]}`;
 
     console.log("🚀 ~ file: index.ts:42 ~ router.post ~ path:", path);
