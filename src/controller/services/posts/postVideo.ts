@@ -70,7 +70,7 @@ export const postVideo = async (
       if (screenshotUploadResult) {
         return res.send({
           video: req.file?.location,
-          thumbNail: `https://${process.env.SPACES_NAME}.${process.env.SPACES_ENDPOINT_WITHOUT_HTTPS}/screenshots/${
+          thumbNail: `https://${process.env.SPACES_ENDPOINT_WITHOUT_HTTPS}/screenshots/${
             videoKey.split(".")[0]
           }-screenshot.jpg`,
         });

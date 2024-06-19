@@ -47,7 +47,7 @@ export const profilePhotoUpload = (
             fileResults
           );
           if (fileResults) {
-            req.imageUri = `https://${process.env.SPACES_NAME}.${process.env.SPACES_ENDPOINT_WITHOUT_HTTPS}/${
+            req.imageUri = `https://${process.env.SPACES_ENDPOINT_WITHOUT_HTTPS}/${
               photo?.filename.split(".")[0]
             }-sm.gif`;
             unlink(

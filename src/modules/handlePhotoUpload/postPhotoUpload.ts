@@ -38,7 +38,7 @@ export const postPhotoUpload = (
         }
       });
       const image = {
-        uri: `https://${process.env.SPACES_NAME}.${process.env.SPACES_ENDPOINT_WITHOUT_HTTPS}/${photo?.filename}`,
+        uri: `https://${process.env.SPACES_ENDPOINT_WITHOUT_HTTPS}/${photo?.filename}`,
         width: dimensions?.width,
         height: dimensions?.height,
       };
